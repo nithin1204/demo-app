@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="username">
+        <label>
+            Username
+            <input [formControl]="username" type="text" placeholder="username" (keyup.enter)="loginClick()" required/>
+        </label>
+    </div>
+    <div class="password">
+        <label>
+            Password
+            <input [formControl]="password" type="password" placeholder="password" (keyup.enter)="loginClick()" required/>
+        </label>
+    </div>
+    <div >
+        <button (click)="loginClick()">Login Here</button>
+    </div>
+</div>
+
+
+

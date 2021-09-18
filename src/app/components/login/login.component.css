@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+}
+.container div{
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-size: 25px;
+}

@@ -1,0 +1,26 @@
+<div class="home-container">
+    <div>Add User</div>
+    <div>Title:
+        <select [(ngModel)]="title">
+            <option *ngFor="let item of titleType" [value]="item.title" [selected]="item === item.title" >{{item.title}}</option>
+        </select>
+    </div>
+    <div>FirstName:<input type="text" [(ngModel)]="fname"></div>
+    <div>Last Name<input type="text" [(ngModel)]="lname"></div>
+    <div>Gender:<input type="text" [(ngModel)]="gender"></div>
+    <div>Eamil:<input type="text" [(ngModel)]="email"></div>
+    <div>Username:<input type="text" [(ngModel)]="username"></div>
+    <div>Password:<input type="text" [(ngModel)]="password"></div>
+    <div>DoB:<input type="text" [(ngModel)]="dob"></div>
+    <div>Phone:<input type="text" [(ngModel)]="phone"></div>
+    <div>
+        <button (click)="addUser()">Add</button>
+    </div>
+</div>
+
+<ul *ngFor="let user of userList">
+    <li *ngIf="user.name?.title ||user.name?.first||  user.name?.last">{{user.name?.title + user.name?.first + user.name?.last}}</li>
+    <li *ngIf="user.gender">{{user.gender}}</li>
+    <li *ngIf="user.email">{{user.email}}</li>
+    <li *ngIf="user.phone">{{user.phone}}</li>
+</ul>
